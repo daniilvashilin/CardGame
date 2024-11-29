@@ -10,35 +10,37 @@ import SwiftUI
 
 struct TopProgramsView: View {
     @EnvironmentObject var topCardsSetModel: TopCardsSetModel
-
+    
     var body: some View {
-        VStack {
-            Text("Select a plan")
-                .padding()
-            ScrollView {
-                ForEach(topCardsSetModel.topCardsStorage, id: \.id) { entity in
-                    NavigationLink(destination: Text("Details for \(entity.name ?? "")")) {
-                        ZStack {
-                            if let imageName = entity.imageName {
-                                Image(imageName)
-                                    .resizable()
+        NavigationStack {
+            VStack {
+                Text("Select a plan")
+                    .padding()
+                ScrollView {
+                    ForEach(topCardsSetModel.topCardsStorage, id: \.id) { entity in
+                        NavigationLink(destination: Text("Details for \(entity.name ?? "")")) {
+                            ZStack {
+                                if let imageName = entity.imageName {
+                                    Image(imageName)
+                                        .resizable()
+                                        .frame(height: 100)
+                                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                                }
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.black.opacity(0.4))
                                     .frame(height: 100)
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                                Text(entity.name ?? "Unknown")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
                             }
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.black.opacity(0.4))
-                                .frame(height: 100)
-                            Text(entity.name ?? "Unknown")
-                                .font(.headline)
-                                .foregroundColor(.white)
                         }
+                        .padding(.horizontal)
                     }
-                    .padding(.horizontal)
                 }
             }
-        }
-        .onAppear {
-            topCardsSetModel.fetchTopCards()
+            .onAppear {
+                topCardsSetModel.fetchTopCards()
+            }
         }
     }
 }
