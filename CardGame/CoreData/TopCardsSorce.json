@@ -1,0 +1,90 @@
+[
+    {
+        "id": "japanPath",
+        "name": "Japanese Travel",
+        "imageName": "tokyo",
+        "cards": [
+            { "text": "こんにちは", "translate": "Hello" },
+            { "text": "さようなら", "translate": "Goodbye" },
+            { "text": "すみません", "translate": "Excuse me / Sorry" },
+            { "text": "ありがとう", "translate": "Thank you" },
+            { "text": "はい", "translate": "Yes" },
+            { "text": "いいえ", "translate": "No" },
+            { "text": "助けて", "translate": "Help" },
+            { "text": "いくらですか？", "translate": "How much is it?" },
+            { "text": "どこですか？", "translate": "Where is it?" },
+            { "text": "トイレ", "translate": "Toilet" },
+            { "text": "食べ物", "translate": "Food" },
+            { "text": "飲み物", "translate": "Drink" },
+            { "text": "ホテル", "translate": "Hotel" },
+            { "text": "空港", "translate": "Airport" },
+            { "text": "駅", "translate": "Station" }
+        ]
+    },
+    {
+        "id": "EnglandPath",
+        "name": "English Travel",
+        "imageName": "london",
+        "cards": [
+            { "text": "Hello", "translate": "Привет" },
+            { "text": "Goodbye", "translate": "Пока" },
+            { "text": "Excuse me", "translate": "Извините" },
+            { "text": "Thank you", "translate": "Спасибо" },
+            { "text": "Yes", "translate": "Да" },
+            { "text": "No", "translate": "Нет" },
+            { "text": "Help", "translate": "Помогите" },
+            { "text": "How much is it?", "translate": "Сколько это стоит?" },
+            { "text": "Where is it?", "translate": "Где это?" },
+            { "text": "Toilet", "translate": "Туалет" },
+            { "text": "Food", "translate": "Еда" },
+            { "text": "Drink", "translate": "Напиток" },
+            { "text": "Hotel", "translate": "Отель" },
+            { "text": "Airport", "translate": "Аэропорт" },
+            { "text": "Station", "translate": "Станция" }
+        ]
+    },
+    {
+        "id": "FinlandPath",
+        "name": "Finnish Travel",
+        "imageName": "helsinki",
+        "cards": [
+            { "text": "Hei", "translate": "Hello" },
+            { "text": "Näkemiin", "translate": "Goodbye" },
+            { "text": "Anteeksi", "translate": "Excuse me / Sorry" },
+            { "text": "Kiitos", "translate": "Thank you" },
+            { "text": "Kyllä", "translate": "Yes" },
+            { "text": "Ei", "translate": "No" },
+            { "text": "Apu", "translate": "Help" },
+            { "text": "Paljonko tämä maksaa?", "translate": "How much is it?" },
+            { "text": "Missä on?", "translate": "Where is it?" },
+            { "text": "Vessa", "translate": "Toilet" },
+            { "text": "Ruoka", "translate": "Food" },
+            { "text": "Juoma", "translate": "Drink" },
+            { "text": "Hotelli", "translate": "Hotel" },
+            { "text": "Lentokenttä", "translate": "Airport" },
+            { "text": "Asema", "translate": "Station" }
+        ]
+    },
+    {
+        "id": "PainPath",
+        "name": "Spanish Travel",
+        "imageName": "madrid",
+        "cards": [
+            { "text": "Hola", "translate": "Hello" },
+            { "text": "Adiós", "translate": "Goodbye" },
+            { "text": "Perdón", "translate": "Excuse me / Sorry" },
+            { "text": "Gracias", "translate": "Thank you" },
+            { "text": "Sí", "translate": "Yes" },
+            { "text": "No", "translate": "No" },
+            { "text": "Ayuda", "translate": "Help" },
+            { "text": "¿Cuánto cuesta?", "translate": "How much is it?" },
+            { "text": "¿Dónde está?", "translate": "Where is it?" },
+            { "text": "Baño", "translate": "Toilet" },
+            { "text": "Comida", "translate": "Food" },
+            { "text": "Bebida", "translate": "Drink" },
+            { "text": "Hotel", "translate": "Hotel" },
+            { "text": "Aeropuerto", "translate": "Airport" },
+            { "text": "Estación", "translate": "Station" }
+        ]
+    }
+]

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23507" systemVersion="24B91" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CardEntity" representedClassName="CardEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <attribute name="translate" optional="YES" attributeType="String"/>
+        <relationship name="deckFavorite" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavoriteCardsSetEntity" inverseName="cards" inverseEntity="FavoriteCardsSetEntity"/>
+        <relationship name="deckTop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TopCardsSetEntity" inverseName="cards" inverseEntity="TopCardsSetEntity"/>
+        <relationship name="deckUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserCustomCardsEntity" inverseName="cards" inverseEntity="UserCustomCardsEntity"/>
+    </entity>
+    <entity name="FavoriteCardsSetEntity" representedClassName="FavoriteCardsSetEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="cards" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CardEntity" inverseName="deckFavorite" inverseEntity="CardEntity"/>
+    </entity>
+    <entity name="TopCardsSetEntity" representedClassName="TopCardsSetEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="cards" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CardEntity" inverseName="deckTop" inverseEntity="CardEntity"/>
+    </entity>
+    <entity name="UserCustomCardsEntity" representedClassName="UserCustomCardsEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="cards" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CardEntity" inverseName="deckUser" inverseEntity="CardEntity"/>
+    </entity>
+</model>
