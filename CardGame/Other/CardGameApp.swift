@@ -13,11 +13,13 @@ import Foundation
 struct CardGameApp: App {
     @StateObject private var dataController = DataControllerModel()
     @StateObject private var topCardsSetModel: TopCardsSetModel
+    @StateObject private var userCustomCardsSetModel: UserCardsSetModel
 
     init() {
         let context = DataControllerModel().container.viewContext // Временный DataController
         let dataControllerTemp = DataControllerModel()
         _topCardsSetModel = StateObject(wrappedValue: TopCardsSetModel(context: context, dataController: dataControllerTemp))
+        _userCustomCardsSetModel = StateObject(wrappedValue: UserCardsSetModel(context: context, dataController: dataControllerTemp))
     }
 
     var body: some Scene {
@@ -26,6 +28,7 @@ struct CardGameApp: App {
                 .environment(\.managedObjectContext, dataController.container.viewContext) // Передаем Core Data Context
                 .environmentObject(dataController)
                 .environmentObject(topCardsSetModel) // Передаем TopCardsSetModel
+                .environmentObject(userCustomCardsSetModel)
         }
     }
 }

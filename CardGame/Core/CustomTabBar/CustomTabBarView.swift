@@ -10,6 +10,8 @@ struct CustomTabBarView: View {
     @Binding var selectedTab: Int
     @State var isPlusPressed = false
     @EnvironmentObject var topCardsSetModel: TopCardsSetModel
+    @EnvironmentObject var userCustomCardsSetModel: UserCardsSetModel
+//    @ObservedObject var deck: UserCustomCardsEntity
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 100)
@@ -51,8 +53,8 @@ struct CustomTabBarView: View {
         }
         .frame(height: 80)
         .sheet(isPresented: $isPlusPressed) {
-            TopProgramsView()
-                           .environmentObject(topCardsSetModel)
+            AddCustomDeckView()
+                .environmentObject(userCustomCardsSetModel)
         }
     }
 }

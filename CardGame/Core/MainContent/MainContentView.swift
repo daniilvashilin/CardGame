@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainContentView: View {
     @State private var selectedTab = 1
+//    @ObservedObject var deck: UserCustomCardsEntity
     var body: some View {
         ZStack(alignment: .bottom) {
             VStack {

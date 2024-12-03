@@ -19,6 +19,6 @@
     </entity>
     <entity name="UserCustomCardsEntity" representedClassName="UserCustomCardsEntity" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="cards" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CardEntity" inverseName="deckUser" inverseEntity="CardEntity"/>
+        <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CardEntity" inverseName="deckUser" inverseEntity="CardEntity"/>
     </entity>
 </model>
